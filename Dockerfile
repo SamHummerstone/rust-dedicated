@@ -1,5 +1,7 @@
 FROM cm2network/steamcmd
 
+RUN apt update && apt install libsqlite3-dev
+
 RUN mkdir -p /home/steam/app/rust_app
 COPY config/ /home/steam/app/config/
 
